@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-customers-list',
   templateUrl: './customers-list.component.html',
   styleUrl: './customers-list.component.css'
 })
-export class CustomersListComponent {
-
+export class CustomersListComponent implements OnInit {
+  filteredCustomers: any[] = [];
+  customersOrderTotal: number;
+  currencyCode: string = 'USD';
+  
+  constructor() {}
+  ngOnInit() {}
 }
