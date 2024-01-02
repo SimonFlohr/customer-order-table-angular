@@ -11,13 +11,13 @@
     </thead>
     <tbody>
         <tr *ngFor="let cust of filteredCustomers">
-            <td><a>{{ cust.name }}</a></td>
+            <td><a>{{ cust.name | titlecase }}</a></td>
             <td>{{ cust.city }}</td>
-            <td>{{ cust.orderTotal }}</td>
+            <td>{{ cust.orderTotal | currency:currencyCode:'symbol' }}</td>
         </tr>
         <tr *ngIf="filteredCustomers && filteredCustomers.length">
             <td colspan="2"></td>
-            <td>{{ customersOrderTotal }}</td>
+            <td>{{ customersOrderTotal | currency:currencyCode:'symbol' }}</td>
         </tr>
         <tr class="table-danger" *ngIf="!filteredCustomers || !filteredCustomers.length">
             <td colspan="4">No customers found</td>
