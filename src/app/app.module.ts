@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { CoreModule } from './core/core.module';
 import { CustomersModule } from './customers/customers.module';
+import { OrdersModule } from './orders/orders.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
@@ -15,9 +16,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     CustomersModule,
-    AppRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    OrdersModule,
+    AppRoutingModule
   ],
   providers: [
     provideClientHydration()
